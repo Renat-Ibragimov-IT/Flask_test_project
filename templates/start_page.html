@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>start_page</title>
+</head>
+<body>
+
+{% if name %}
+    {% if counter > 1 %}
+        <h2>You are logged in as "{{ name }}" {{ counter }} times</h2>
+    {% else %}
+        <h2>You are logged in as "{{ name }}" {{ counter }} time</h2>
+    {% endif %}
+<p>Click <a href="/logout"> here</a> to log out</p>
+{% else %}
+    <h2>Please log in</h2>
+    <p>Click <a href="/login"> here</a> to log in</p>
+{% endif %}
+
+</body>
+</html>

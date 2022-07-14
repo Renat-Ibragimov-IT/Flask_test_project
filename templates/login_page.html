@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login_page</title>
+</head>
+<body>
+{% if name %}
+    <h2>You are logged in as "{{ name }}"</h2>
+{% else %}
+    <form action="login" method = "POST">
+        <p>Please enter Your username</p>
+        <input type = "text" name = 'username' />
+        <p><input type = "submit" value = "submit" /></p>
+    </form>
+{% endif %}
+
+</body>
+</html>
